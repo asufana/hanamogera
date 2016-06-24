@@ -22,7 +22,7 @@ public class Lexer {
     }
     
     /** 文字列をトークンリストに変換する */
-    private static List<Token> toTokens(final String line) {
+    public static List<Token> toTokens(final String line) {
         final List<Token> tokens = new ArrayList<>();
         
         //正規表現マッチ

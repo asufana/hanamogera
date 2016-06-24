@@ -39,6 +39,9 @@ public class ASTExpr implements ASTNode {
         if (eval.equals("+")) {
             return left + right;
         }
+        if (eval.equals("-")) {
+            return left - right;
+        }
         throw new RuntimeException();
     }
 }

@@ -13,7 +13,7 @@ public class LexerTest {
     
     @Test
     public void testLexer() {
-        final List<Token> tokens = Lexer.toTokens(Arrays.asList("10 + 20 + 30"));
+        final List<Token> tokens = Lexer.toTokens("10 + 20 + 30");
         assertThat(tokens,
                    contains(new NumToken(10),
                             new IdToken("+"),
