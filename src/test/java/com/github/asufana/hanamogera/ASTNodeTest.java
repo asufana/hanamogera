@@ -10,7 +10,7 @@ import com.github.asufana.hanamogera.ast.expr.*;
 import com.github.asufana.hanamogera.ast.leaf.*;
 import com.github.asufana.hanamogera.token.*;
 
-public class InterpreterTest {
+public class ASTNodeTest {
     
     @Test
     //10+20
