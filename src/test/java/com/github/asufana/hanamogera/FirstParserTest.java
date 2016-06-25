@@ -19,7 +19,8 @@ public class FirstParserTest {
         //構文解析
         final ASTNode nodes = new FirstParser(tokens).expression();
         //実行
-        assertThat(nodes.eval(), is(60));
+        final Object result = nodes.eval();
+        assertThat(result, is(60));
     }
     
 }

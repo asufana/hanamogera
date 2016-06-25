@@ -97,6 +97,21 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.github.asufana.hanamogera.Interpreter</mainClass>
+							<packageName>com.github.asufana.hanamogera</packageName>
+							<addClasspath>true</addClasspath>
+							<addExtensions>true</addExtensions>
+							<classpathPrefix>.</classpathPrefix>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
