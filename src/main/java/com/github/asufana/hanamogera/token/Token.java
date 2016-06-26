@@ -4,6 +4,8 @@ import org.apache.commons.lang3.builder.*;
 
 public abstract class Token {
     
+    public abstract String text();
+    
     public abstract TokenType tokenType();
     
     @Override

@@ -18,6 +18,11 @@ public class NumToken extends Token {
     }
     
     @Override
+    public String text() {
+        return String.valueOf(value);
+    }
+    
+    @Override
     public TokenType tokenType() {
         return TokenType.Num;
     }

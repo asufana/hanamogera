@@ -14,6 +14,11 @@ public class IdToken extends Token {
     }
     
     @Override
+    public String text() {
+        return value;
+    }
+    
+    @Override
     public TokenType tokenType() {
         return TokenType.Id;
     }

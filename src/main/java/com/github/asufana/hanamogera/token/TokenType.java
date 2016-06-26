@@ -10,7 +10,7 @@ import lombok.experimental.*;
 @Accessors(fluent = true)
 /** トークン種別 */
 public enum TokenType {
-                       Id("[\\+\\-]") {
+                       Id("[\\+\\-\\*\\/]") {
                            @Override
                            public Token createToken(final String value) {
                                return new IdToken(value);

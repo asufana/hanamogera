@@ -36,6 +36,12 @@ public class ASTExpr implements ASTNode {
     /** 数値処理 */
     private Integer compute(final Integer left, final ASTNode expr, final Integer right) {
         final String eval = (String) expr.eval();
+        if (eval.equals("*")) {
+            return left * right;
+        }
+        if (eval.equals("/")) {
+            return left / right;
+        }
         if (eval.equals("+")) {
             return left + right;
         }
