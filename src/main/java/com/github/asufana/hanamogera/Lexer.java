@@ -14,15 +14,15 @@ public class Lexer {
     private static final Pattern pattern = Pattern.compile(regex);
     
     /** 文字列をトークンリストに変換する */
-    public static List<Token> toTokens(final List<String> lines) {
+    public static TokenList toTokens(final List<String> lines) {
         final List<Token> tokens = lines.stream()
                                         .flatMap(line -> toTokens(line).stream())
                                         .collect(toList());
-        return tokens;
+        return new TokenList(tokens);
     }
     
     /** 文字列をトークンリストに変換する */
-    public static List<Token> toTokens(final String line) {
+    public static TokenList toTokens(final String line) {
         final List<Token> tokens = new ArrayList<>();
         
         //正規表現マッチ
@@ -33,7 +33,7 @@ public class Lexer {
             final Token token = toToken(matcher);
             tokens.add(token);
         }
-        return tokens;
+        return new TokenList(tokens);
     }
     
     /** マッチ結果をトークンに変換する */

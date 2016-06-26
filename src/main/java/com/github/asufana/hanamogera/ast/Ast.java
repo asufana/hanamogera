@@ -1,7 +1,7 @@
 package com.github.asufana.hanamogera.ast;
 
 /** ASTルートノード */
-public interface ASTNode {
+public interface Ast {
     
     /** 計算する */
     Object eval();

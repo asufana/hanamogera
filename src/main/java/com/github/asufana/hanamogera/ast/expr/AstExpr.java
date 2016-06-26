@@ -7,13 +7,13 @@ import lombok.experimental.*;
 
 @Getter
 @Accessors(fluent = true)
-public class ASTExpr implements ASTNode {
+public class AstExpr implements Ast {
     
-    private final ASTNode left;
-    private final ASTNode expr;
-    private final ASTNode right;
+    private final Ast left;
+    private final Ast expr;
+    private final Ast right;
     
-    public ASTExpr(final ASTNode left, final ASTNode expr, final ASTNode right) {
+    public AstExpr(final Ast left, final Ast expr, final Ast right) {
         this.left = left;
         this.expr = expr;
         this.right = right;
@@ -34,7 +34,7 @@ public class ASTExpr implements ASTNode {
     }
     
     /** 数値処理 */
-    private Integer compute(final Integer left, final ASTNode expr, final Integer right) {
+    private Integer compute(final Integer left, final Ast expr, final Integer right) {
         final String eval = (String) expr.eval();
         if (eval.equals("*")) {
             return left * right;
